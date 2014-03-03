@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="bidi.js"></script>
+		<script>
+			$( document ).ready(function() {
+				var pBidi = new bidi();
+				var str = $("#myinput").text();
+				
+				$("#myoutput").text(pBidi.LtrToRtl(str, str.length, pBidi.CL_ME));
+			});
+		</script>
+	</head>
+	<body>
+		<div id="myinput">אני כותב Hebrew, 123 עכשיו!!!</div>
+		<div id="myoutput"></div>
+	</body>
+</html>
